@@ -86,7 +86,7 @@ end f;
 
 
 function derivative(me:polynomial) return polynomial is
-	r : polynomial(me'first-1..0);
+	r : polynomial(0..me'last-1);
 begin
 	for i in r'range loop 
 		r(i) := me(i+1)*real(i+1);
