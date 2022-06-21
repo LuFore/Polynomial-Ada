@@ -148,7 +148,7 @@ end compact;
 function leading_i(me:polynomial)return natural is
 begin
 	for i in reverse me'range loop
-		if me(i) = 1.0 then
+		if me(i) != 0.0 then
 			return i;
 		end if;
 	end loop;
