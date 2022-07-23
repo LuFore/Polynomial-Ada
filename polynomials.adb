@@ -78,7 +78,11 @@ function f(me:polynomial; x:real) return real is
 	r : real := 0.0;
 begin
 	for i in me'range loop
-		r := r + me(i)**i;
+		if i = 0 then
+			r := me(0);
+		else
+			r := r + me(i)**i;
+		end if;
 	end loop;
 	return r;
 end f;
